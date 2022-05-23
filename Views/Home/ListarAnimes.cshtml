@@ -1,0 +1,19 @@
+﻿@{
+    ViewData["Title"] = "Lista de Animes";
+}
+
+@model List<teste_mysql_do_zero.Models.Dtos.AnimeDto>
+
+<div class="text-center">
+    <h1 class="display-4">Lista de Animes</h1>
+
+    @foreach (var objAnimeDto in Model)
+    {
+        <hr>
+        <div>
+        ID: @objAnimeDto.Id<br>
+        Nome: @objAnimeDto.NomeAnime<br>
+        Data: @objAnimeDto.DataCriacao<br>
+        </div>
+    }
+</div>
